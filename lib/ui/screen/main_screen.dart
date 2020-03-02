@@ -24,7 +24,7 @@ class _OffersState extends State<Offers> with SingleTickerProviderStateMixin {
     return Scaffold(
       appBar: SearchAppBar(_tabController),
       body: TabBarView(
-        children: <Widget>[CompaniesTab(), OffersTab()],
+        children: <Widget>[OffersTab(), CompaniesTab()],
         controller: _tabController,
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );

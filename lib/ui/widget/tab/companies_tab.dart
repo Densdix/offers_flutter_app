@@ -3,12 +3,12 @@ import 'package:offers_flutter_app/ui/widget/item/company_item.dart';
 
 class CompaniesTab extends StatelessWidget{
   final List<Widget> companyList = <Widget>[
-    CompanyItem(1, "assets/images/companies-items/fox.png", color: Color(0xFFFE5000)),
-    CompanyItem(2, "assets/images/companies-items/adidas.png"),
-    CompanyItem(3, "assets/images/companies-items/turk.png"),
-    CompanyItem(4, "assets/images/companies-items/reebok.png", color: Color(0xFF0074CD)),
-    CompanyItem(4, "assets/images/companies-items/answear.png", color: Color(0xFFF1B1C8)),
-    CompanyItem(4, "assets/images/companies-items/puma.png", color: Colors.black),
+    CompanyItem(1, "assets/images/companies/fox.png", color: Color(0xFFFE5000)),
+    CompanyItem(2, "assets/images/companies/adidas.png"),
+    CompanyItem(3, "assets/images/companies/turk.png"),
+    CompanyItem(4, "assets/images/companies/reebok.png", color: Color(0xFF0074CD)),
+    CompanyItem(4, "assets/images/companies/answear.png", color: Color(0xFFF1B1C8)),
+    CompanyItem(4, "assets/images/companies/puma.png", color: Colors.black),
   ];
 
   @override

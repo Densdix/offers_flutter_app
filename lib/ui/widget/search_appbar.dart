@@ -51,7 +51,7 @@ class _SearchAppBarState extends State<SearchAppBar> {
       ),
       actions: <Widget>[
         IconButton(
-          icon: Icon(Icons.search),
+          icon: actionIcon,
           onPressed: () {
             setState(() {
               if(this.actionIcon.icon == Icons.search){
