@@ -30,11 +30,12 @@ class _SearchAppBarState extends State<SearchAppBar> {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 0.8,
+      backgroundColor: Color(0xFF02AD58),
       leading: Padding(
         padding: EdgeInsets.only(left: 12.0),
         child: IconButton(
           icon: Image.asset("assets/images/Back.png"),
-          onPressed: (){},
+          onPressed: (){Scaffold.of(context).openDrawer();},
         ),
       ),
       title: appBarTitle,
