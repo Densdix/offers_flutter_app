@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class OfferItem extends StatelessWidget {
 
@@ -8,17 +9,27 @@ class OfferItem extends StatelessWidget {
   final String title;
   final String date;
   final bool wideBanner;
+  StaggeredTile staggeredTile;
 
-  OfferItem(this.id, this.image, this.title, this.date, this.wideBanner);
+  OfferItem(this.id, this.image, this.title, this.date, {this.wideBanner = false}){
+    if(wideBanner)
+      this.staggeredTile = StaggeredTile.count(4, 2);
+    else
+      this.staggeredTile = StaggeredTile.count(2, 3);
+  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(8.0),
+        image: DecorationImage(
+          image: AssetImage(image),
+          fit: BoxFit.fill
+        )
+      ),
       child: Stack(
         children: <Widget>[
-          ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.asset(image)),
           Positioned(
             child: Container(
               height: wideBanner == false ? 112.0 : 90.0,
