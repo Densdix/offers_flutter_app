@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:offers_flutter_app/ui/widget/company/company_detail_tab.dart';
+import 'package:offers_flutter_app/ui/widget/company/tab/company_detail_tab.dart';
 import 'package:offers_flutter_app/ui/widget/offer/offers_tab.dart';
 
 class CompanyDetailScreen extends StatefulWidget {

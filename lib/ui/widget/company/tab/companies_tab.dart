@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:offers_flutter_app/ui/widget/company/company_item.dart';
+import 'package:offers_flutter_app/ui/widget/company/item/company_item.dart';
 
 class CompaniesTab extends StatelessWidget{
   final List<Widget> companyList = <Widget>[

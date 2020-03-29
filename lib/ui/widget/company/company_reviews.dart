@@ -1,6 +1,6 @@
 import 'package:expandable/expandable.dart';
 import 'package:flutter/material.dart';
-import 'package:offers_flutter_app/ui/widget/company/review_item.dart';
+import 'package:offers_flutter_app/ui/widget/company/item/review_item.dart';
 
 class CompanyReviews extends StatefulWidget {
 
