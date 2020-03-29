@@ -57,8 +57,8 @@ class _CompanyReviewsState extends State<CompanyReviews>{
             alignment: Alignment.centerRight,
             child: FlatButton(
               child: _isExpandButtonPressed
-                  ? Text("СВЕРНУТЬ", style: TextStyle(color: Color(0xFFFF473D)))
-                  : Text("ВСЕ ОТЗЫВЫ", style: TextStyle(color: Color(0xFF02AD58))),
+                  ? Text("СВЕРНУТЬ", style: TextStyle(color: Color(0xFFFF473D), letterSpacing: 2, fontWeight: FontWeight.bold))
+                  : Text("ВСЕ ОТЗЫВЫ", style: TextStyle(color: Color(0xFF02AD58), letterSpacing: 2, fontWeight: FontWeight.bold)),
               onPressed: () {
                 setState(() {
                   _expandableController.toggle();

@@ -70,7 +70,7 @@ class _ScheduleCompanyState extends State<ScheduleCompany>{
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 25),
+      padding: EdgeInsets.only(bottom: 20),
       child: Column(
         children: <Widget>[
           Row(
@@ -79,16 +79,16 @@ class _ScheduleCompanyState extends State<ScheduleCompany>{
                 child: ListTile(
                   leading: Icon(
                     Icons.schedule,
-                    size: 25.0,
+                    size: 22.0,
                     color: Colors.black.withOpacity(0.38),),
-                  title: Text("График работы", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black.withOpacity(0.54)),),
+                  title: Text("График работы", style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.54)),),
                 ),
               ),
               Padding(
                 padding: EdgeInsets.only(right: 15),
                 child: _isOpen
-                    ? Text("Открыто", style: TextStyle(color: Colors.green, fontWeight: FontWeight.w500,),)
-                    : Text("Закрыто", style: TextStyle(color: Colors.red, fontWeight: FontWeight.w500,),),
+                    ? Text("Открыто", style: TextStyle(color: Color(0xFF02AD58), fontWeight: FontWeight.bold,),)
+                    : Text("Закрыто", style: TextStyle(color: Color(0xFFFF473D), fontWeight: FontWeight.bold,),),
               )
             ],
           ),
@@ -138,12 +138,24 @@ class WorkingDay extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 72, right: 16, top: 12),
+      padding: const EdgeInsets.only(left: 72, right: 16, top: 10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          Text(dayOfWeek, style: TextStyle(fontWeight:  isCurrentDay? FontWeight.bold : FontWeight.w300),),
-          Text(startingTime+" – "+endingTime, style: TextStyle(fontWeight: isCurrentDay ? FontWeight.bold : FontWeight.w300),),
+          Text(
+            dayOfWeek,
+            style: TextStyle(
+                fontWeight:  isCurrentDay? FontWeight.bold : FontWeight.normal,
+                color: isCurrentDay? Colors.black : Colors.black.withOpacity(0.54)
+            ),
+          ),
+          Text(
+            startingTime+" – "+endingTime,
+            style: TextStyle(
+                fontWeight: isCurrentDay ? FontWeight.bold : FontWeight.normal,
+                color: isCurrentDay? Colors.black : Colors.black.withOpacity(0.54)
+            ),
+          ),
         ],
       ),
     );

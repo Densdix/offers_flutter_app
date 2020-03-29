@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:offers_flutter_app/custom_route.dart';
 import 'package:offers_flutter_app/ui/screen/main_screen.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
+
+  final theme = ThemeData(
+    fontFamily: "GoogleSans",
+    primaryColor: Color(0xFF02AD58),
+    //primarySwatch: Colors.blue,
+  );
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: theme,
+      onGenerateRoute: CustomRoute.generateRoute,
       home: Offers(),
     );
   }

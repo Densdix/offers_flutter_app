@@ -49,7 +49,7 @@ class _ReviewItemState extends State<ReviewItem>{
                 children: <Widget>[
                   Padding(
                     padding: EdgeInsets.only(bottom: 4),
-                    child: Text(widget.name, style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500),),
+                    child: Text(widget.name, style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),),
                   ),
                   RatingBar(
                     itemBuilder: (context, _) => Icon(Icons.star, color: Colors.amber,),

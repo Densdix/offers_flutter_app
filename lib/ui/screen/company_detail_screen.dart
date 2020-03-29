@@ -4,11 +4,20 @@ import 'package:offers_flutter_app/ui/widget/offer/offers_tab.dart';
 
 class CompanyDetailScreen extends StatefulWidget {
 
+  final List arguments;
+
   String title;
   String img;
   Color color;
 
-  CompanyDetailScreen(this.title, this.img, this.color);
+  CompanyDetailScreen(this.arguments){
+    title = arguments[0];
+    img = arguments[1];
+    color = arguments[2];
+  }
+  //CompanyDetailScreen(this.title, this.img, this.color);
+
+
 
   @override
   State<StatefulWidget> createState() => _CompanyDetailScreenState();

@@ -1,22 +1,20 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:offers_flutter_app/ui/screen/company_detail_screen.dart';
-import 'package:offers_flutter_app/ui/widget/offer/offers_tab.dart';
+import 'package:offers_flutter_app/custom_route.dart';
 
 class CompanyItem extends StatelessWidget {
   final String title;
-  final Color color;
   final String image;
+  final Color color;
 
   CompanyItem(this.title, this.image, {this.color = Colors.white});
-
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Navigator.push(context, MaterialPageRoute(
-        builder: (context) => CompanyDetailScreen(title, imageMaxPath(), color)
-      )),
+      onTap: () => Navigator.pushNamed(
+        context,
+        CustomRoute.DETAILS_COMPANY, arguments: [title, imageMaxPath(), color]),
       child: Container(
         child: Card(
           elevation: 1,

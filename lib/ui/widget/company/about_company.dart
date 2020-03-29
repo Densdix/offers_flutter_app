@@ -36,18 +36,22 @@ class _AboutCompanyState extends State<AboutCompany> {
                 flex: 1,
                 child: Icon(
                   Icons.info_outline,
-                  size: 25.0,
+                  size: 22.0,
                   color: Colors.black.withOpacity(0.38),
                 ),
               ),
               Expanded(
                 flex: 6,
                 child: ListTile(
-                  title: Text("О компании", style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500, color: Colors.black.withOpacity(0.54)),),
+                  title: Text(
+                    "О компании",
+                    style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold, color: Colors.black.withOpacity(0.54),
+                    ),
+                  ),
                   subtitle: Padding(
                     padding: EdgeInsets.only(top: 20.0),
                     child: Expandable(
-                      collapsed: Text(loremIpsum, maxLines: 6, overflow: TextOverflow.ellipsis, style: TextStyle(fontFamily: "Google Sans"),),
+                      collapsed: Text(loremIpsum, maxLines: 6, overflow: TextOverflow.ellipsis,),
                       expanded: Text(loremIpsum),
                       controller: _expandableController,
                     ),
@@ -62,8 +66,8 @@ class _AboutCompanyState extends State<AboutCompany> {
           alignment: Alignment.centerRight,
           child: FlatButton(
             child: _isExpandButtonPressed
-                ? Text("СВЕРНУТЬ", style: TextStyle(color: Color(0xFFFF473D)))
-                : Text("ДЕТАЛЬНЕЕ", style: TextStyle(color: Color(0xFF02AD58))),
+                ? Text("СВЕРНУТЬ", style: TextStyle(color: Color(0xFFFF473D), fontWeight: FontWeight.bold))
+                : Text("ДЕТАЛЬНЕЕ", style: TextStyle(color: Color(0xFF02AD58), fontWeight: FontWeight.bold)),
             onPressed: () {
               setState(() {
                 _expandableController.toggle();
