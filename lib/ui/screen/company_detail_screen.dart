@@ -57,7 +57,11 @@ class _CompanyDetailScreenState extends State<CompanyDetailScreen> with SingleTi
                 onPressed:() => Navigator.pop(context),
               ),
               backgroundColor: widget.color,
-              title: _isSliverExpanded ? Text(widget.title) : Text(""),
+              title: _isSliverExpanded
+                  ? Text(
+                      widget.title,
+                      style: TextStyle(color: _isSaturated ? Colors.black : Colors.white),)
+                  : Text(""),
               pinned: true,
               floating: false,
               expandedHeight: 250,
