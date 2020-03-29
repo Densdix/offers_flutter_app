@@ -50,6 +50,7 @@ class _CompanyDetailState extends State<CompanyDetail>{
                       itemBuilder: (context, _) => Icon(Icons.star, color: Colors.amber,),
                       onRatingUpdate: (double value) {},
                       itemSize: 20,
+                      initialRating: 4,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 3),
