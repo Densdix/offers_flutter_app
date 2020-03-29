@@ -5,6 +5,8 @@ import 'package:offers_flutter_app/ui/widget/company/companies_tab.dart';
 import 'package:offers_flutter_app/ui/widget/offer/offers_tab.dart';
 
 class Offers extends StatefulWidget{
+  static final myProfileId = 9999;
+
   @override
   State<StatefulWidget> createState() => _OffersState();
 }
