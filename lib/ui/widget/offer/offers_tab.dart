@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
-import 'package:offers_flutter_app/ui/widget/item/offer_item.dart';
+import 'package:offers_flutter_app/ui/widget/offer/offer_item.dart';
 
-import '../item/offer_item.dart';
+import 'offer_item.dart';
 
 class OffersTab extends StatelessWidget{
   final List<OfferItem> offersList = [
